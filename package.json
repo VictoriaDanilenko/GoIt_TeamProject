@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Agarkovsergey.github.io/GoIt_TeamProject",
+  "homepage": "https://VictoriaDanilenko.github.io/GoIt_TeamProject_ICECREAM", 
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url /GoIt_TeamProject/",
+    "predeploy": "npm run build -- --public-url /GoIt_TeamProject_ICECREAM/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
