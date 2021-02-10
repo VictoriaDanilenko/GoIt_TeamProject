@@ -122,11 +122,15 @@ img {
   align-items: center;
   text-align: center;
   color: #d41443;
+  background-color: #ffffff;
+  border: 1px solid transparent;
 }
 .buynow:hover, .buynow:focus {
-  background-color: #ddd0d0;
+  background-color: #ECEBEB;
   color: #d41443;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  border: 1px solid #7a1129;
 }
 .buynow svg {
   margin-top: 1px;
@@ -149,6 +153,8 @@ header .container {
 }
 @media screen and (min-width: 768px) {
   header .container {
+    padding-left: 4.4270833333%;
+    padding-right: 4.4270833333%;
     padding-top: 37px;
     width: 768px;
   }
@@ -161,6 +167,8 @@ header .container {
   }
 }
 header a {
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
@@ -168,11 +176,16 @@ header a {
   text-decoration: none;
   color: #d41443;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
 }
 header a svg {
   margin-right: 19px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+header a svg:hover {
+  border-radius: 50%;
+  border: 1px solid #ffffff;
 }
 header .menu-button {
   position: relative;
@@ -180,10 +193,16 @@ header .menu-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
   width: 25px;
   height: 25px;
   border: none;
   background-color: inherit;
+}
+@media screen and (min-width: 768px) {
+  header .menu-button {
+    margin-right: 18px;
+  }
 }
 @media screen and (min-width: 1280px) {
   header .menu-button {
@@ -201,7 +220,7 @@ header .menu-button .icon-cross {
 @media screen and (min-width: 768px) {
   header .menu-button.is-open {
     top: -30px;
-    margin-right: -650px;
+    margin-right: -175px;
   }
 }
 header .menu-button.is-open .icon-cross {
@@ -211,11 +230,6 @@ header .menu-button.is-open .icon-cross {
 header .menu-button.is-open .icon-menu {
   display: none;
 }
-@media screen and (min-width: 768px) {
-  header .menu-button {
-    margin-right: -225px;
-  }
-}
 header .buynow {
   display: none;
 }
@@ -223,6 +237,12 @@ header .buynow {
   header .buynow {
     display: block;
     padding: 10px 34px 10px 36px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .buynow {
+    display: block;
+    padding: 12px 34px 12px 36px;
   }
 }
 header .b-menu {
@@ -270,19 +290,19 @@ header .b-menu .buynow {
     display: none;
   }
 }
+header .b-menu ul:last-child {
+  border-bottom: 2px solid #e18298;
+}
+@media screen and (min-width: 1280px) {
+  header .b-menu ul:last-child {
+    border-bottom: none;
+  }
+}
 @media screen and (min-width: 1280px) {
   header .b-menu ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-}
-header .b-menu ul :last-child {
-  border-bottom: 2px solid #e18298;
-}
-@media screen and (min-width: 1280px) {
-  header .b-menu ul :last-child {
-    border-bottom: none;
   }
 }
 header .b-menu li {
@@ -291,10 +311,24 @@ header .b-menu li {
   padding-left: 21px;
   height: 42px;
   border-top: 2px solid #e18298;
+}
+header .b-menu li a {
+  text-transform: none;
+  display: block;
+  font-size: 14px;
+  line-height: 1.29;
+  font-style: normal;
   font-weight: 700;
   color: #ffffff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-header .b-menu li:hover {
+@media screen and (min-width: 1280px) {
+  header .b-menu li a {
+    font-size: 16px;
+    line-height: 1.31;
+  }
+}
+header .b-menu li a:hover {
   color: #d41443;
 }
 @media screen and (min-width: 1280px) {
@@ -303,8 +337,6 @@ header .b-menu li:hover {
     padding-left: 0px;
     height: 100%;
     border-top: none;
-    font-size: 16px;
-    line-height: 1.31;
   }
   header .b-menu li:not(:last-child) {
     margin-right: 35px;
@@ -364,8 +396,8 @@ header .b-menu li:hover {
 .hero .back-round {
   position: absolute;
   top: 83px;
-  left: 65.3%;
   transform: translateX(-50%);
+  left: 65.3125%;
   height: 346px;
   width: 346px;
   border-radius: 50%;
@@ -374,7 +406,7 @@ header .b-menu li:hover {
 @media screen and (min-width: 768px) {
   .hero .back-round {
     top: 31px;
-    left: 61%;
+    left: 61.0677083333%;
     height: 324px;
     width: 324px;
   }
@@ -382,7 +414,7 @@ header .b-menu li:hover {
 @media screen and (min-width: 1280px) {
   .hero .back-round {
     top: 52px;
-    left: 62%;
+    left: 58.125%;
     height: 538px;
     width: 538px;
   }
@@ -390,7 +422,7 @@ header .b-menu li:hover {
 .hero .content {
   position: absolute;
   top: 193px;
-  left: 6.25%;
+  left: 4.4270833333%;
 }
 @media screen and (min-width: 768px) {
   .hero .content {
@@ -493,18 +525,22 @@ header .b-menu li:hover {
 .hero .content .hero-link .ancor {
   background-color: #d41443;
   color: #ffffff;
+  border: 1px solid transparent;
 }
 .hero .content .hero-link .ancor:hover, .hero .content .hero-link .ancor:focus {
-  background-color: #7a1129;
+  background-color: #c7133e;
   color: #ffffff;
+  border: 1px solid #ECEBEB;
 }
 .hero .content .hero-link .ancor-accent {
   background-color: #ffffff;
   color: #d41443;
+  border: 1px solid transparent;
 }
 .hero .content .hero-link .ancor-accent:hover, .hero .content .hero-link .ancor-accent:focus {
-  background-color: #ddd0d0;
+  background-color: #ECEBEB;
   color: #d41443;
+  border: 1px solid #7a1129;
 }
 .hero .content .hero-link .ancor,
 .hero .content .hero-link .ancor-accent {
@@ -549,6 +585,18 @@ header .b-menu li:hover {
     margin-bottom: 20px;
   }
 }
+@media screen and (min-width: 768px) {
+  .hero .content .hero-milk-container .hero-description svg {
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hero .content .hero-milk-container .hero-description svg:hover, .hero .content .hero-milk-container .hero-description svg:focus {
+    outline: none;
+    border-radius: 50%;
+    background-color: #ECEBEB;
+    color: #d41443;
+    border: 1px solid #7a1129;
+  }
+}
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .hero .content .hero-milk-container .hero-description svg {
     width: 18px;
@@ -570,64 +618,90 @@ header .b-menu li:hover {
   }
 }
 .hero .info .info-data {
-  position: relative;
+  position: absolute;
   top: 94px;
-  right: 0;
+  right: 4.4%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: flex-end;
 }
-.hero .info .info-data .cafe {
-  margin-right: auto;
-  width: 43px;
-  height: 44px;
-  position: relative;
+@media screen and (min-width: 1280px) {
+  .hero .info .info-data {
+    right: 7.6%;
+    top: 156px;
+  }
 }
-.hero .info .info-data .truck {
-  margin-right: auto;
-  width: 51px;
+.hero .info .info-data li {
+  margin-bottom: 13px;
   height: 43px;
-  position: relative;
+}
+@media screen and (min-width: 1280px) {
+  .hero .info .info-data li {
+    margin-bottom: 15px;
+    height: 77px;
+  }
 }
 .hero .info .info-data .ring {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
+  margin-left: auto;
+  margin-bottom: -15px;
   width: 16px;
   height: 16px;
   background-color: #ffffff;
   border-radius: 50%;
 }
+@media screen and (min-width: 1280px) {
+  .hero .info .info-data .ring {
+    margin-bottom: -26px;
+    width: 30px;
+    height: 30px;
+  }
+}
 .hero .info .info-data .data-content {
+  margin-right: 8px;
   font-family: Titan One;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
-  line-height: 1.14;
+  line-height: 1.15;
   text-align: right;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
 }
+@media screen and (min-width: 1280px) {
+  .hero .info .info-data .data-content {
+    margin-right: 15px;
+    margin-bottom: 11px;
+    font-size: 46px;
+    line-height: 1.15;
+  }
+}
 .hero .info .info-data .name {
+  margin-right: 8px;
   font-family: DM Sans;
   font-style: normal;
   font-weight: 400;
   font-size: 8px;
-  line-height: 10px;
+  line-height: 1.25;
   text-align: right;
   color: #ffffff;
 }
+@media screen and (min-width: 1280px) {
+  .hero .info .info-data .name {
+    margin-right: 18px;
+    font-size: 14px;
+    line-height: 1.3px;
+  }
+}
 .hero .info .tasty {
   position: absolute;
-  right: 6.25%;
+  right: 4.8177083333%;
   top: 266px;
 }
 @media screen and (min-width: 1280px) {
   .hero .info .tasty {
     position: absolute;
-    right: 6.25%;
+    right: 8.515625%;
     top: 433px;
   }
 }
@@ -667,7 +741,7 @@ header .b-menu li:hover {
   display: block;
   color: #ffa5ba;
   font-size: 18px;
-  line-height: 1.67;
+  line-height: 1.166;
   font-weight: 400px;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -706,7 +780,8 @@ header .b-menu li:hover {
 @media screen and (min-width: 1280px) {
   .goods {
     font-size: 58px;
-    line-height: 1.138;
+    line-height: 1.137;
+    letter-spacing: 0.06em;
     margin-bottom: 259px;
   }
 }
@@ -746,44 +821,24 @@ header .b-menu li:hover {
 
 .products-description {
   color: #ffffff;
-  font-weight: 700;
   width: 200px;
-  font-size: 12px;
-  line-height: 1.52;
+  font-size: 14px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
-  margin-top: 65px;
+  margin-top: 66px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .products-description {
-    font-size: 14px;
-    line-height: 1.76;
+    width: 198px;
+    line-height: 1.79;
   }
 }
 @media screen and (min-width: 1280px) {
   .products-description {
-    font-size: 16px;
-    line-height: 1.76;
-    width: 240px;
-  }
-}
-
-.text {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.7;
-  color: #ffffff;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .text {
-    font-size: 14px;
-    line-height: 1.76;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .text {
+    width: 241px;
+    margin-top: 70px;
     font-size: 16px;
     line-height: 1.76;
   }
@@ -804,11 +859,11 @@ header .b-menu li:hover {
 
 .products-item {
   display: block;
-  height: 450px;
+  height: 485px;
   text-align: center;
   border-radius: 24px;
   position: relative;
-  padding-top: 140px;
+  padding-top: 161px;
 }
 @media screen and (max-width: 767px) {
   .products-item:not(:last-child) {
@@ -817,8 +872,7 @@ header .b-menu li:hover {
 }
 @media screen and (min-width: 768px) {
   .products-item {
-    width: 220px;
-    height: 485px;
+    padding-top: 152px;
   }
   .products-item:not(:last-child) {
     margin-right: 20px;
@@ -826,8 +880,8 @@ header .b-menu li:hover {
 }
 @media screen and (min-width: 1280px) {
   .products-item {
-    width: 330px;
     height: 525px;
+    padding-top: 163px;
   }
   .products-item:not(:last-child) {
     margin-right: 23px;
@@ -875,12 +929,6 @@ header .b-menu li:hover {
   width: 100%;
 }
 
-.icon_header_arrow {
-  width: 4, 43px;
-  height: 8px;
-  padding-right: 17px;
-}
-
 .products-link::after {
   display: block;
   content: "";
@@ -892,6 +940,11 @@ header .b-menu li:hover {
   margin-right: auto;
   transform: translateY(30px);
 }
+@media screen and (min-width: 768px) {
+  .products-link::after {
+    transform: translateY(22px);
+  }
+}
 @media screen and (min-width: 1280px) {
   .products-link::after {
     transform: translateY(40px);
@@ -901,8 +954,31 @@ header .b-menu li:hover {
 .howitmade {
   width: 100%;
   padding-top: 125px;
+  padding-bottom: 58px;
   margin: 0;
   background-color: #fff5f6;
+  background-image: url("/milk_mobile.a0424a8c.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px 766px;
+}
+@media screen and (min-width: 768px) {
+  .howitmade {
+    padding-top: 130px;
+    background-image: none;
+    padding-bottom: 140px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .howitmade {
+    padding-top: 125px;
+    background-image: url(/milk_decktop.3e111fc0.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position: 0px 342px;
+    padding-bottom: 139px;
+  }
 }
 
 .title1_howitmade {
@@ -922,7 +998,7 @@ header .b-menu li:hover {
     line-height: 30px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .title1_howitmade {
     font-size: 30px;
     line-height: 34px;
@@ -948,11 +1024,12 @@ header .b-menu li:hover {
     line-height: 55px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .title2_howitmade {
     font-size: 58px;
     line-height: 66px;
-    margin-bottom: 55px;
+    margin-top: 15px;
+    margin-bottom: 0px;
   }
 }
 
@@ -963,12 +1040,63 @@ header .b-menu li:hover {
   padding-left: 30px;
   padding-right: 30px;
 }
+@media screen and (min-width: 768px) {
+  .text_howitmade {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p_buttooom {
+    width: 50%;
+    margin-left: 17px;
+    padding-right: 19px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .p_buttooom {
+    width: 50%;
+    margin-left: 74px;
+    padding-right: 16px;
+  }
+}
+
+.cow-picture {
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .cow-picture {
+    margin-top: 50px;
+    padding-left: 19px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cow-picture {
+    margin-top: 55px;
+    padding-left: 0px;
+  }
+}
 
 .lorem1 {
   margin-top: 46px;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 12px;
   line-height: 19px;
+}
+@media screen and (min-width: 768px) {
+  .lorem1 {
+    margin-top: 100px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .lorem1 {
+    margin-top: 106px;
+    font-size: 16px;
+    line-height: 28px;
+  }
 }
 
 .lorem2 {
@@ -977,6 +1105,41 @@ header .b-menu li:hover {
   font-size: 12px;
   line-height: 19px;
   color: #907e82;
+}
+@media screen and (min-width: 768px) {
+  .lorem2 {
+    margin-top: 47px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .lorem2 {
+    margin-top: 35px;
+    font-size: 14px;
+    line-height: 27px;
+  }
+}
+
+.lorem3 {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  color: #907e82;
+}
+@media screen and (min-width: 768px) {
+  .lorem3 {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .lorem3 {
+    margin-top: 35px;
+    font-size: 14px;
+    line-height: 27px;
+  }
 }
 
 .button_readmore {
@@ -999,32 +1162,94 @@ header .b-menu li:hover {
   background-color: #ECEBEB;
   color: #d41443;
 }
+@media screen and (min-width: 768px) {
+  .button_readmore {
+    margin-top: 62px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button_readmore {
+    margin-top: 45px;
+  }
+}
+
+.icon_header_arrow {
+  width: 7px;
+  height: 10px;
+  margin-left: 17px;
+  margin-top: 2px;
+}
+
+.li_text {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .li_text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .li_text {
+    font-size: 16px;
+    line-height: 28px;
+    width: 330px;
+  }
+}
 
 .howitmade_list {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-top: 38px;
+  margin-top: 39px;
 }
 @media screen and (min-width: 768px) {
   .howitmade_list {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    margin-top: 66px;
+    margin-left: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .howitmade_list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 146px;
+    margin-left: 16px;
   }
 }
 
 .howitmade_lii {
   width: 100%;
-  margin-top: 38px;
+  margin-bottom: 38px;
   justify-content: space-between;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .howitmade_lii {
-    width: 270px;
+    margin-right: 60px;
+    margin-bottom: 0px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .howitmade_lii {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .howitmade_lii:last-child {
+    margin-right: 0;
+  }
+}
+
 .number_howitmade {
+  width: 98px;
+  height: 56px;
   font-family: Titan One;
   font-weight: normal;
   font-size: 36px;
@@ -1033,14 +1258,46 @@ header .b-menu li:hover {
   color: #d41443;
   margin-top: 16px;
 }
+@media screen and (min-width: 768px) {
+  .number_howitmade {
+    margin-top: 36px;
+    margin-bottom: 13px;
+    font-size: 48px;
+    line-height: 55px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .number_howitmade {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 58px;
+    line-height: 66px;
+  }
+}
+
+.picture_block {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+  overflow: hidden;
+}
+.picture_block .kartinki-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.images-block_container {
+  background: linear-gradient(0deg, #fff 60%, #fff5f6 0);
+}
 
 .section-slider {
-  margin-top: 120px;
-  margin-bottom: 119px;
+  padding-top: 120px;
+  padding-bottom: 119px;
 }
 @media screen and (min-width: 1280px) {
   .section-slider {
-    margin-bottom: 135px;
+    padding-bottom: 135px;
   }
 }
 
@@ -1264,6 +1521,7 @@ header .b-menu li:hover {
   width: 7px;
   height: 10px;
   margin: 0 auto;
+  margin-top: 1px;
 }
 @media screen and (min-width: 768px) {
   .locations-store-svg {
@@ -1305,13 +1563,14 @@ header .b-menu li:hover {
     padding-left: 39px;
   }
 }
-.locations-franchise.svg {
+.locations-franchise .svg {
   width: 7px;
   height: 10px;
   margin: 0 auto;
+  margin-top: 1px;
 }
 @media screen and (min-width: 768px) {
-  .locations-franchise.svg {
+  .locations-franchise .svg {
     margin-right: 38px;
   }
 }
